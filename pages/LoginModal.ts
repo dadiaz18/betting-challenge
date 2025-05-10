@@ -15,14 +15,6 @@ export class LoginModal {
   private forgotSubmitButton: Locator;
   private captchaInput: Locator;
 
-  //alert selectors
-  private alertTitle: Locator;
-  private alertMessage: Locator;
-  private alertOkButton: Locator;
-  private alert: Locator;
-  private alertForgotPasswordButton: Locator;
-  private alertChangePasswordButton: Locator;
-
   constructor(private page: Page) {
 
     // for login purpose
@@ -38,14 +30,6 @@ export class LoginModal {
     this.forgotTitle = page.locator('div.contactTitle');
     this.forgotSubmitButton = page.getByRole('button', { name: 'Enviar' });
     this.captchaInput = page.getByRole('textbox', { name: 'Introduce el resultado' });
-
-    //alert selectors
-    this.alert = page.locator('ion-alert[role="alertdialog"]');
-    this.alertTitle = page.locator('.alert-head');
-    this.alertMessage = page.locator('.alert-message');
-    this.alertOkButton = page.getByRole('button', { name: 'OK' });
-    this.alertForgotPasswordButton = page.getByRole('button', { name: /¿olvidó su contraseña\?/i });
-    this.alertChangePasswordButton = page.getByRole('button', { name: 'Cambiar contraseña' });
 
   }
 
@@ -93,31 +77,6 @@ export class LoginModal {
 
   async enterCaptcha(captcha: string): Promise<void> {
     await this.captchaInput.fill(captcha);
-  }
-
-  //alert methods
-  get alertLocator(): Locator {
-    return this.alert;
-  }
-
-  async getAlertText(): Promise<string | null> {
-    return await this.alertMessage.textContent();
-  }
-
-  async dismissAlert(): Promise<void> {
-    await this.alertOkButton.click();
-  }
-
-  async clickAlertForgotPassword(): Promise<void> {
-    await this.alertForgotPasswordButton.click();
-  }
-
-  async getAlertTitle(): Promise<string | null> {
-    return await this.alertTitle.textContent();
-  }
-
-  async clickAlertChangePassword(): Promise<void> {
-    await this.alertChangePasswordButton.click();
   }
 
 }
