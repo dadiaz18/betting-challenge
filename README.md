@@ -1,7 +1,3 @@
-Claro Diego, aquí tenés cómo quedaría visualmente el `README.md` ya renderizado, como se vería en GitHub o en cualquier visor Markdown:
-
----
-
 # 🎯 Betting Challenge – Login Automation with Playwright
 
 This repository contains an automated test suite created for the **Codere login functionality challenge**, using the [Playwright](https://playwright.dev/) framework.
@@ -101,6 +97,3 @@ npm run test:report
 
 Crafted with ❤️ by Diego
 
----
-
-Si querés, te paso el archivo listo para copiar/pegar como `.md` o incluso subirlo yo a GitHub si me das acceso. ¿Te gustaría agregar tu nombre y LinkedIn en la parte del autor?
