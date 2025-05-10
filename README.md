@@ -67,7 +67,6 @@ npm test
 ```bash
 npm run test:chrome      # Chromium
 npm run test:firefox     # Firefox
-npm run test:safari      # WebKit
 ```
 
 ### Run with UI (headed mode)
@@ -75,7 +74,6 @@ npm run test:safari      # WebKit
 ```bash
 npm run test:chrome:ui
 npm run test:firefox:ui
-npm run test:safari:ui
 ```
 
 ### View HTML test report

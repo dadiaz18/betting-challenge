@@ -9,10 +9,8 @@
     "test:report": "npx playwright show-report",
     "test:chrome": "npx playwright test --project=chromium",
     "test:firefox": "npx playwright test --project=firefox",
-    "test:safari": "npx playwright test --project=webkit",
     "test:chrome:ui": "npx playwright test --project=chromium --headed",
-    "test:firefox:ui": "npx playwright test --project=firefox --headed",
-    "test:safari:ui": "npx playwright test --project=webkit --headed"
+    "test:firefox:ui": "npx playwright test --project=firefox --headed"
   },
   "keywords": [],
   "author": "",
