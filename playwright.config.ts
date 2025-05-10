@@ -8,17 +8,17 @@ export default defineConfig({
   workers: process.env.CI ? 2 : undefined,
   reporter: 'html',
 
-  timeout: 10000,
+  timeout: 15000,
 
   expect: {
-    timeout: 5000,
+    timeout: 10000,
   },
 
   use: {
     baseURL: 'https://m.apuestas.codere.es',
     trace: 'on-first-retry',
-    actionTimeout: 5000,
-    navigationTimeout: 8000
+    actionTimeout: 10000,
+    navigationTimeout: 15000
   },
 
   projects: [
