@@ -1,0 +1,24 @@
+{
+  "name": "betting-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:report": "npx playwright show-report",
+    "test:chrome": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:safari": "npx playwright test --project=webkit",
+    "test:chrome:ui": "npx playwright test --project=chromium --headed",
+    "test:firefox:ui": "npx playwright test --project=firefox --headed",
+    "test:safari:ui": "npx playwright test --project=webkit --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.17"
+  }
+}
