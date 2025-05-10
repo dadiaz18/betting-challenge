@@ -8,9 +8,7 @@
     "test:headed": "npx playwright test --headed",
     "test:report": "npx playwright show-report",
     "test:chrome": "npx playwright test --project=chromium",
-    "test:firefox": "npx playwright test --project=firefox",
-    "test:chrome:ui": "npx playwright test --project=chromium --headed",
-    "test:firefox:ui": "npx playwright test --project=firefox --headed"
+    "test:chrome:ui": "npx playwright test --project=chromium --headed"
   },
   "keywords": [],
   "author": "",

@@ -4,6 +4,7 @@
 
 This repository contains an automated test suite created for the **Codere login functionality challenge**, using the [Playwright](https://playwright.dev/) framework.
 
+---
 
 ## 📌 Objective
 
@@ -11,7 +12,7 @@ The goal is to validate the **login flow** of [https://m.apuestas.codere.es](htt
 
 ---
 
-## ✅ What’s Covered
+## ✅ What's Covered
 
 The following test scenarios are automated:
 
@@ -23,18 +24,18 @@ The following test scenarios are automated:
 
 Each test includes:
 
-* Visibility checks
-* Message assertions
-* Proper alert handling
+* Visibility checks  
+* Message assertions  
+* Proper alert handling  
 
 ---
 
 ## 🧱 Tech Stack
 
-* ⚙️ **Playwright** for browser automation
-* 📐 **Page Object Model** for clean and reusable code
-* 💻 Tests written in **TypeScript**
-* 📊 Generates an **HTML report** on completion
+* ⚙️ **Playwright** for browser automation  
+* 📐 **Page Object Model** for clean and reusable code  
+* 💻 Tests written in **TypeScript**  
+* 📊 Generates an **HTML report** on completion  
 
 ---
 
@@ -69,14 +70,12 @@ npm test
 
 ```bash
 npm run test:chrome      # Chromium
-npm run test:firefox     # Firefox
 ```
 
 ### Run with UI (headed mode)
 
 ```bash
 npm run test:chrome:ui
-npm run test:firefox:ui
 ```
 
 ### View HTML test report
@@ -89,13 +88,13 @@ npm run test:report
 
 ## ℹ️ Notes
 
-* The site includes a **CAPTCHA**, but it was **not required as part of the challenge**, so it is **simulated** in tests where necessary.
-* ✅ The test suite is fully **CI-integrated** using **GitHub Actions** – every push and pull request automatically runs the tests.
-* The suite is **CI-friendly**: retries are enabled and `.only` tests are forbidden in CI environments.
+* ⚠️ **Important:** The site includes **geo-restrictions**, and GitHub Actions servers are redirected to a "NotAllowedCountry" page.
+  For that reason, **tests fail in CI but run successfully in local environments** (e.g., from Spain or Latin America).
+* The site includes a **CAPTCHA**, but it was **not required as part of the challenge**, so it is **simulated** in the test flow.
+* The test suite remains **CI-configured** for reference purposes, using GitHub Actions.
 
 ---
 
 ## 🧑‍💻 Author
 
 Crafted with ❤️ by Diego
-

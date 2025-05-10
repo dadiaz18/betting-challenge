@@ -15,6 +15,12 @@ jobs:
         with:
           node-version: 20
 
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-browsers    
+
       - name: Install dependencies
         run: npm install
 
