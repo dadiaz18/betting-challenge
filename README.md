@@ -1,6 +1,9 @@
 # 🎯 Betting Challenge – Login Automation with Playwright
 
+![CI Status](https://github.com/dadiaz18/betting-challenge/actions/workflows/playwright.yml/badge.svg)
+
 This repository contains an automated test suite created for the **Codere login functionality challenge**, using the [Playwright](https://playwright.dev/) framework.
+
 
 ## 📌 Objective
 
@@ -87,6 +90,7 @@ npm run test:report
 ## ℹ️ Notes
 
 * The site includes a **CAPTCHA**, but it was **not required as part of the challenge**, so it is **simulated** in tests where necessary.
+* ✅ The test suite is fully **CI-integrated** using **GitHub Actions** – every push and pull request automatically runs the tests.
 * The suite is **CI-friendly**: retries are enabled and `.only` tests are forbidden in CI environments.
 
 ---
