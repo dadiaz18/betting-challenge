@@ -12,7 +12,7 @@ export class UiAlert {
     this.alert = page.locator('ion-alert[role="alertdialog"]');
     this.alertTitle = page.locator('.alert-head');
     this.alertMessage = page.locator('.alert-message');
-    this.alertOkButton = page.getByRole('button', { name: 'OK' });
+    this.alertOkButton = page.getByRole('button', { name: 'OK', exact: true });
     this.alertForgotPasswordButton = page.getByRole('button', { name: /¿olvidó su contraseña\?/i });
     this.alertChangePasswordButton = page.getByRole('button', { name: 'Cambiar contraseña' });
   }

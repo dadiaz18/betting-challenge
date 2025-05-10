@@ -23,10 +23,11 @@ test.describe('Login functionality', () => {
         if (await cookieBanner.isVisible()) {
             await cookieBanner.accept();
         }
+        
     });
 
     test('should show error alert when login with empty credentials', async () => {
-        await navbar.clickAcceder();
+        await navbar.clickLogin();
         await expect(loginModal.modalLocator).toBeVisible();
 
         await loginModal.login();
@@ -39,11 +40,11 @@ test.describe('Login functionality', () => {
     });
 
     test('should show error message when login with invalid credentials', async () => {
-        await navbar.clickAcceder();
+        await navbar.clickLogin();
         await expect(loginModal.modalLocator).toBeVisible();
 
-        await loginModal.enterUsername('usuario_invalido123');
-        await loginModal.enterPassword('contraseña_incorrecta123');
+        await loginModal.enterUsername('invalid_user');
+        await loginModal.enterPassword('invalid_password');
         await loginModal.login();
 
         await expect(uiAlert.alertLocator).toBeVisible();
@@ -54,7 +55,7 @@ test.describe('Login functionality', () => {
     });
 
     test('should show error when recovering password with invalid data', async () => {
-        await navbar.clickAcceder();
+        await navbar.clickLogin();
         await expect(loginModal.modalLocator).toBeVisible();
 
         await loginModal.clickForgotPassword();
@@ -71,7 +72,7 @@ test.describe('Login functionality', () => {
     });
 
     test('should redirect to remember password when clicking on change password on alert', async () => {
-        await navbar.clickAcceder();
+        await navbar.clickLogin();
         await expect(loginModal.modalLocator).toBeVisible();
 
         await loginModal.enterUsername('2');
@@ -86,7 +87,7 @@ test.describe('Login functionality', () => {
     });
 
     test('should change password with valid data', async () => {
-        await navbar.clickAcceder();
+        await navbar.clickLogin();
         await expect(loginModal.modalLocator).toBeVisible();
 
         await loginModal.enterUsername('admin');
